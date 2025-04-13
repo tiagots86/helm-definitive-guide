@@ -1,0 +1,6 @@
+wordpressUsername: tiago
+existingSecret: custom-wp-credentials
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
