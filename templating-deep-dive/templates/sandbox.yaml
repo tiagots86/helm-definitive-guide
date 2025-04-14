@@ -1,16 +1,3 @@
-{{- /*I am a Go comment, and I will not remain in the final output*/ -}}
-teste: {{ replace " " "-" .Values.teste | lower}}
-labels:
-  {{- /*The app label comes from the Release*/}}
-  app: {{.Release.Name}}
-  {{- /*The chart label comes from the Chart*/}}
-  chart: {{.Chart.Name}}
-  {{- if eq .Values.environment "production" }}
-  environment: production
-  build: stable
-  public-ingress: true
-  {{ else }}
-  environment: dev
-  build: alpha
-  public-ingress: false
-  {{ end }}
+list:
+  values:
+    example: {{ list 1 2 3 | toYaml | nindent 4 }}
