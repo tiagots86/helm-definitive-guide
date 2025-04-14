@@ -1,8 +1,15 @@
 replicaCount: 2
 
+environment: production
+
 image:
   name: nginx
   tag: "1.27.0"
 
 containerPort:
   http: 80
+
+service:
+  enabled: true
+  type: ClusterIP
+  port: 80
