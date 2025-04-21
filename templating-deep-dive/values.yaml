@@ -18,3 +18,8 @@ services:
   svc2:
     type: NodePort
     port: 3007
+
+securityContext:
+  enabled: true
+  runAsUser: 1000
+  fsGroup: 2000
